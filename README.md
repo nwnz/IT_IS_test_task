@@ -12,6 +12,6 @@ python3 create_db.py
 ```
 3. Запусть сервер на Flask используя команды:
 ```python
-export FLASK_APP=app.py flask run
+python3 app.py
 ```
 для развертывания web-сервера и перейти по адресу [loclhost:5000](localhost:5000)
