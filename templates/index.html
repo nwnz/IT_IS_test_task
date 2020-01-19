@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{IT}IS_Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
+</head>
+<body>
+<h1>{IT}IS_Project</h1>
+<div>
+          <form method="post">
+            <h4>1. Посетители из какой страны совершают больше всего действий на сайте? </h4>
+            <input type="submit" name="btn" value="Узнать первое" />
+             <h5>{{ result1 }}</h5>
+            <h4>2. Посетители из какой страны чаще всего интересуются товарами из определенных категорий?</h4>
+            <select name="list1">
+                {% for opt in tmp %}
+                <option value="{{ opt[0] }}">{{ opt[0] }}</option>
+                {% endfor %} </select>
+            <input type="submit" name="btn" value="Узнать второе" />
+          <h5>{{ result2 }}</h5>
+             <h4>3. В какое время суток чаще всего просматривают определенную категорию товаров? </h4>
+            <select name="list2">
+                {% for opt in tmp %}
+                <option value="{{ opt[0] }}">{{ opt[0] }}</option>
+                {% endfor %}</select>
+            <input type="submit" name="btn" value="Узнать третье" />
+          <h5>{{ result3 }}</h5>
+        </form>
+</div>
+</body>
+</html>
